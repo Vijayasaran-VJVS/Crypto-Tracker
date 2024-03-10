@@ -1,0 +1,137 @@
+.App {
+  height: auto;
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  background-color: black;
+}
+
+.cryptoHeader {
+  width: 100%;
+  height: 200px;
+  /* background-color: #ED7D3A; */
+  background-image: url(./assets/components/images/banner.jpg);
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cryptoHeader input {
+  width: 50%;
+  height: 50px;
+  /* border: none;
+  border-radius: 5px;
+  background-color: black; */
+
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgb(137, 116, 0);
+
+
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(211, 179, 0);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cryptoDisplay {
+  margin-top: 20px;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .cryptoDisplay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coin {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cryptoDisplay {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.coin {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(255, 255, 255, 1);
+
+  color: white;
+  margin: 20px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+
+  @media screen and (max-width: 480px) {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.coin:hover {
+  background-color: rgb(60, 60, 0);
+  color: yellow;
+  transform: scale(1.2);
+}
+
+.coin img {
+  height: 50px;
+}
+
+.coin .name {
+  font-size: x-large;
+  background-color: black;
+  padding: 8px;
+}
+
+.coin .price {
+  font-size: large;
+}
+
+.coin .symbol {
+  font-size: medium;
+  color: #DCED31;
+}
+
+.coin .name1 {
+  color: #EF2D56;
+}
+
+.coin .price1 {
+  color: #ED7D3A;
+  background-color: black;
+  padding: 5px;
+}
